@@ -36,7 +36,6 @@ if [[ "$answer" != [Yy]* ]]; then
 fi
 
 
-
 # start initial sync
 echo
 echo Initial synchronization started, please wait ... 
@@ -82,7 +81,7 @@ echo "<?xml version=\"1.0\" encoding=\"UTF-8\"?>
 </dict>
 </plist>" >  com.google.contacts.sync.addressbook.plist
 
-# laod the job
+# load the job
 launchctl load com.google.contacts.sync.addressbook.plist
 
 echo Done. 
