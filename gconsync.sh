@@ -61,8 +61,6 @@ while true; do
     fi
 done
 
-echo $INTERVAL
-
 
 # create launchd job file
 cd ~/Library/LaunchAgents/
