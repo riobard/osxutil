@@ -30,11 +30,10 @@ echo
 echo Now open \"Address Book\" and click \"Preferences\" in the menu. Check \"Synchronize with Google\" box. It will ask for your Google account and password. 
 echo
 read -p "Did you check the box and enter your Google account and password? (Yes/No): " answer
-
-case "$answer" in
-    [Yy]*) ;;
-    *)   echo "Bye."; exit ;;
-esac
+if [[ "$answer" != [Yy]* ]]; then
+    echo Bye.
+    exit
+fi
 
 
 
