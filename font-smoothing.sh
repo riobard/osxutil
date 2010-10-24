@@ -12,7 +12,7 @@
 # 2: medium (best for LCD)
 # 3: strong smoothing
 
-defaults -currentHost write -globalDomain AppleFontSmoothing -int 2
+defaults -currentHost write -globalDomain AppleFontSmoothing -int 3
 
 # per-application control
 # e.g. TextMate
