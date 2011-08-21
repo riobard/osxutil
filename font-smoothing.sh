@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 # This script can change the font smoothing level for Snow Leopard 
 # since Snow Leopard relies on external displays to report if it is
@@ -12,7 +12,19 @@
 # 2: medium (best for LCD)
 # 3: strong smoothing
 
-defaults -currentHost write -globalDomain AppleFontSmoothing -int 3
+choice=$1
+
+case $choice in
+
+    'off')      n=0;;
+    'light')    n=1;;
+    'medium')   n=2;;
+    'strong')   n=3;;
+    *)          echo 'Usage: font-smoothing.sh [off|light|medium|strong]'
+esac
+
+
+defaults -currentHost write -globalDomain AppleFontSmoothing -int $n
 
 # per-application control
 # e.g. TextMate
